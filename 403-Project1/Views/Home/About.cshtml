@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h3>@ViewBag.Title the Information Systems Department</h3>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['State', 'Percentage of Graduates'],
+          ['Utah', 50],
+          ['California', 17.31],
+          ['Texas', 11.54],
+          ['Washington', 4.81],
+          ['Arizona', 3.85],
+          ['Colorado', 1.92],
+          ['Michigan', 1.92],
+          ['Virginia', 1.92],
+          ['DC', 0.96],
+          ['Georgia', 0.96],
+          ['Illinois', 0.96],
+          ['Maryland', 0.96],
+          ['Massachusetts', 0.96],
+          ['Oregon', 0.96],
+          ['Wisconsin', 0.96]
+        ]);
+
+        var options = {
+            title: 'States by percentage',
+            pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+    }
+</script>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h4><u>What is BYU Information Systems?</u></h4>
+        <p>Information systems professionals define, develop, and maintain the information system infrastructure that supports the operations of all businesses, governments, and other institutions. These professionals use a wide variety of skills in carrying out this function. The BSIS degree develops your ability to function effectively as a professional, applying state-of-the-art technology in solving business problems. You are trained in business and information systems and taught to understand complex business environments.</p>
+        <p>Built on a solid foundation of business courses, the curriculum advances your understanding of technologies in the design and development of information systems. You gain technical expertise in systems analysis; systems design and implementation; database development and management; programming; telecommunications (networking; 2-tier, 3-tier, and n-tier application development; and web application development.</p>
+        <br><h4><u>How to Apply</u></h4>
+        <b>BYU Students</b>
+        <p>You may apply to the Information Systems program if you have completed or are enrolled in all of the Pre-Information Systems Core courses. The deadline to apply to the program is the last working day of June at 4:30pm. Application to the program is done online and can be accessed at the link below.</p>
+        <ul>
+            <li><a href="https://marriottschool.byu.edu/apply/bsis/">Online Application</a></li>
+        </ul>
+        <p>The online application consists of verifying and entering Pre-Information Systems Core course grades, writing a 500-word essay, and attaching a current resume.</p>
+        <p>After submitting your application, you will receive notification of the acceptance committee's decision within one month of the last working day of June (i.e. the application submission deadline). You may use the same application link found above to check the decision status of your application.</p>
+        <br><b>Transfer Students</b>
+        <p>Transfer students from another university or institution must be formally admitted to BYU before being eligible to apply to the Information Systems program. Prerequisite courses should be completed at BYU to be competitive for admission.  For further information, please contact the Information Systems Academic Advisor by e-mail at is.advisor@byu.edu, or by phone at 801-422-5602.</p>
+
+
+    </div>
+</div>
+
+<div class="panel panel-default" id="mapalumni">
+    <div class="panel-body">
+        <h4><u>Where are the recent graduates living?</u></h4>
+        <div id="donutchart" style="width: 900px; height: 500px;"></div>
+    </div>
+</div>
+
+

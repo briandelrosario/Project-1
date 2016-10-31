@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Degrees";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if(ViewBag.id == "bsis") {
+    Html.RenderPartial("degreeinfo");
+}
+
+@if(ViewBag.id == "mism") {
+    Html.RenderPartial("degreeinfo");
+    }
+@if (ViewBag.id != "mism" & ViewBag.id != "bsis") { 
+    Html.RenderPartial("selectdegree");
+    }
+
+@if (ViewBag.id == "bsis")
+{
+    <h2>BSIS FAQ's</h2>
+    Html.RenderPartial("bsis");
+}
+@if (ViewBag.id == "mism")
+{
+    <h2>MISM FAQ's</h2>
+    Html.RenderPartial("mism");
+}
+

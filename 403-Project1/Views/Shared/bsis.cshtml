@@ -1,0 +1,129 @@
+﻿@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default" id="panel1">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-target="#collapseOne"
+                   href="#collapseOne" class="collapsed">
+                    Tuition
+                </a>
+            </h4>
+
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">The tuition cost for the BSIS is the same as all BYU undergraduate tuition costs. <a href="http://graduatestudies.byu.edu/content/costs-financial-aid">Click here for more info.</a>
+            <hr>   
+                <button class="btn btn-info btn-sm" data-toggle="collapse" data-target="#faq1">Add your answer</button>
+                <div id="faq1" class="collapse">
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleTextarea">Answer Question:</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Put your answer here."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit Reply</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default" id="panel2">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-target="#collapseTwo"
+                   href="#collapseTwo" class="collapsed">
+                    What are the prerequisites for the Information Systems junior core?
+                </a>
+            </h4>
+
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+                <p>The prerequisite classes for the information systems junior core are as follows:</p>
+                <ul>
+                    <li>
+                        IS 201 (IS 110 must be taken before or concurrently with IS 201)
+                    </li>
+                    <li>
+                        ACC 200
+                    </li>
+                    <li>
+                    FIN 201
+                    </li>
+                    <li>
+                    BUS M 241
+                    </li>
+                    <li>
+                    IS 303 (or CS 142)
+                    </li>
+                </ul>
+                <p>IS 201 and IS 303 (CS 142) require a grade of B or better.</p>
+                <hr>
+                <button class="btn btn-info btn-sm" data-toggle="collapse" data-target="#faq2">Add your answer</button>
+                <div id="faq2" class="collapse">
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleTextarea">Answer Question:</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Put your answer here."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit Reply</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default" id="panel3">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-target="#collapseThree"
+                   href="#collapseThree" class="collapsed">
+                    Can I take all of the prerequisite classes in the same semester?
+                </a>
+            </h4>
+
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">It is possible to take all of the prerequisite classes in one semester, though it is strongly discouraged due to the extensive time and effort required for each course. 
+                <hr>
+                <button class="btn btn-info btn-sm" data-toggle="collapse" data-target="#faq3">Add your answer</button>
+                <div id="faq3" class="collapse">
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleTextarea">Answer Question:</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Put your answer here."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit Reply</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <hr>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="exampleTextarea">Add a question:</label>
+                    <textarea style="min-width: 100%" class="form-control" id="exampleTextarea" rows="3" placeholder="Put your question here."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Question</button>
+            </form>
+        </div>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,106 @@
+﻿.panel-heading a:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    color: grey;
+}
+.panel-heading a.collapsed:after {
+    content:"\e080";
+}
+
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.navbar {
+    background-color: #09314f;
+    border-color: #09314f;
+    top:0;
+    height: 50px;
+}
+
+
+#navbar {
+    top:10px!important;
+    position:relative;
+}
+
+#msmlogo {
+    top: 10px;
+    position:relative;
+    left:20px;
+    width: 400px;
+    height: 27.578px;
+}
+
+.container .jumbotron {
+    border-radius: 0px;
+}
+
+#navbarmenu {
+    background-color: #09314f;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+    font: bolder;
+}
+
+.navbar-inverse .navbar-nav > li:hover {
+    background-color: #0a416b;
+}
+
+@media screen and (max-width: 540px){
+    #msmlogo {
+    top: 15px;
+    position:relative;
+    left:8px;
+    width: 240px;
+    height: 16.5468px;
+}
+    #openingmsg {
+        width:260px!important;
+    }
+}
+@media screen and (max-width: 430px){
+    #msmlogo {
+    top: 15px;
+    position:relative;
+    left:8px;
+    width: 216px;
+    height: 14.89212px;
+}
+    #openingmsg {
+        width:240px!important;
+    }
+}
+
+.jumbotron {
+    width: 100%;
+    position: relative;
+    left: 0;
+    background-image:url("http://marriottschool.byu.edu/wp-content/uploads/2015/06/Tanner-1a-1200x506.jpg");
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}

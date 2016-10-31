@@ -1,0 +1,21 @@
+﻿<div style="top:75px;"><center><h2>@ViewBag.degree</h2></center></div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+
+        <p>
+            <b>Degree coordinator: </b>@ViewBag.dcoord<br>
+            <b>Title: </b>@ViewBag.coordtitle<br>
+            <b>Office: </b>@ViewBag.office<br><br><br>
+            <b>Education:</b>
+            <ul>
+                @Html.Raw(@ViewBag.phd)
+                @Html.Raw(@ViewBag.masters)
+                @Html.Raw(@ViewBag.bachelors)
+            </ul>
+
+        </p>
+    </div>
+    <div class="col-md-2"><span style="vertical-align:middle;"><img style="width:142.656px;height:200px;vertical-align: middle;border-radius: 5px;" src="@ViewBag.coordpic" /></span></div>
+    <div class="col-md-2"></div>
+</div>

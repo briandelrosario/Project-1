@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+@model BlowOut.Models.EmailFormModel
+
+<h2>@ViewBag.Title.</h2>
+<h3>Contact Us</h3>
+
+<address>
+    790 TNRB, Brigham Young University<br />
+    Provo, UT <br />
+    <abbr title="Phone">P:</abbr>
+    801.422.5602
+</address>
+
+<address>
+    <strong>Advisement:</strong>   <a href="mailto:is.advisor@byu.edu">is.advisor@byu.edu</a>
+</address>
+
+<hr>
+
+<h3>Send us a message</h3>
+@using (Html.BeginForm(new {@id="selector" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FromName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FromName)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FromEmail, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FromEmail)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Subject", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+           @Html.DropDownListFor(m => m.Subject, new SelectList(Enum.GetValues(typeof(BlowOut.Models.Subject))), "-- Subject --", new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
+            
+        </div>
+    </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" onclick="javascript:document.getElementById(selector).reset();" class="btn btn-default" value="Send" />
+                </div>
+            </div>
+}
